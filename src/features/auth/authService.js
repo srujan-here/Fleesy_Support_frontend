@@ -1,6 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:3001/api/users";
-const LOGIN_URL = "http://localhost:3001/api/users/login";
+const API_URL = "https://sore-jade-viper-coat.cyclic.app/api/users/";
+const LOGIN_URL = "https://sore-jade-viper-coat.cyclic.app/api/users/login";
 
 //register
 const register = async (userData) => {

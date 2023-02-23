@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from "axios";
 
-const API_URL = 'http://localhost:3001/api/tickets/'
+const API_URL = "https://sore-jade-viper-coat.cyclic.app/api/tickets/";
 
 // Get ticket notes
 const getNotes = async (ticketId, token) => {
@@ -8,12 +8,12 @@ const getNotes = async (ticketId, token) => {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
 
-  const response = await axios.get(API_URL + ticketId + '/notes', config)
+  const response = await axios.get(API_URL + ticketId + "/notes", config);
 
-  return response.data
-}
+  return response.data;
+};
 
 // Create ticket note
 const createNote = async (noteText, ticketId, token) => {
@@ -21,22 +21,22 @@ const createNote = async (noteText, ticketId, token) => {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
 
   const response = await axios.post(
-    API_URL + ticketId + '/notes',
+    API_URL + ticketId + "/notes",
     {
       text: noteText,
     },
     config
-  )
+  );
 
-  return response.data
-}
+  return response.data;
+};
 
 const noteService = {
   getNotes,
   createNote,
-}
+};
 
-export default noteService
+export default noteService;

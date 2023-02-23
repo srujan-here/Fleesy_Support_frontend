@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/api/tickets/";
+const API_URL = "https://sore-jade-viper-coat.cyclic.app/api/tickets/";
 
 // Create new ticket
 const createTicket = async (ticketData, token) => {
